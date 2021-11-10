@@ -1,7 +1,7 @@
 node() {
 
   stage ('Checkout'){
-    checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/ravitejaops/helloworld-java-maven.git']]])
+    checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/ravitejaops/JacocoExample.git']]])
     }
   /*stage ('Build') {
     withMaven  {
