@@ -28,4 +28,7 @@ node() {
                    -D sonar.verbose=true'
                 }
         }
+  stage ('cleanWorkspace') {
+  cleanWs()
+  }
 }
