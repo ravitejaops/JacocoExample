@@ -10,11 +10,11 @@ node() {
   }*/
 
  stage ('Scan and Build Jar File') {
-               withSonarQubeEnv(installationName: 'sonarJenkins', credentialsId: 'sonarJenkins') {
+               withSonarQubeEnv('sonarqube') {
                 sh 'mvn clean install sonar:sonar \
                    -D sonar.projectKey=com.scmgalaxy.mavensample:my-maven \
-                   -D sonar.host.url=http://35.179.15.141:9090/sonar \
-                   -D sonar.login=9542888cc05d9907ff959385af4bbf1564c7d6f0 \
+                   -D sonar.host.url=http://18.133.170.11:9000/sonar \
+                   -D sonar.login=64c4d8679d2ed38a5b1d92c9fb33ea01046b5f7d \
                    -D sonar.projectVersion=1.0.0 \
                    -D sonar.sources=src/main/java/ \
                    -D sonar.sourceEncoding=UTF-8 \
